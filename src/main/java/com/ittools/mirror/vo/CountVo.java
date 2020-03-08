@@ -12,6 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class CountVo {
     private long totalVisitTime;
-    private long totalSize;
+    private float totalSize;
     private long totalUserNum;
+    private float avgSpeed;
 }
