@@ -4,10 +4,7 @@ import com.ittools.mirror.common.ResponseResult;
 import com.ittools.mirror.service.CountService;
 import com.ittools.mirror.vo.CountVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CountController {
@@ -15,12 +12,12 @@ public class CountController {
     @Autowired
     CountService countService;
 
-    @RequestMapping(value = "/count",method = RequestMethod.GET)
+    @GetMapping(value = "/count")
     public ResponseResult getLastCount(){
         return countService.getLastCount();
     }
 
-    @RequestMapping(value = "/count",method = RequestMethod.POST)
+    @PostMapping(value = "/count")
     public ResponseResult addCount(@RequestBody CountVo countVo){
         return countService.addNewCount(countVo);
     }

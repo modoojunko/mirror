@@ -15,7 +15,7 @@ public class MirrorController {
     MirrorService mirrorService;
 
 
-    @RequestMapping(value = "/resource",method = RequestMethod.GET)
+    @GetMapping(value = "/resource")
     public ResponseResult getAll(@RequestParam(value = "id",required = false) Long id){
         if(null!=id && id>0){
             return mirrorService.findMirrorById(id);
@@ -23,18 +23,18 @@ public class MirrorController {
         return mirrorService.getMirror();
     }
 
-    @RequestMapping(value = "/resource/{id}", method = RequestMethod.PUT)
+    @PutMapping(value = "/resource/{id}")
     public ResponseResult modifyById(@PathVariable(value = "id")long id,
                                      @RequestBody MirrorVo mirrorVo){
         return mirrorService.modifyMirrorById(id,mirrorVo);
     }
 
-    @RequestMapping(value = "/resource/{id}",method = RequestMethod.DELETE)
+    @DeleteMapping(value = "/resource/{id}")
     public ResponseResult deleteMirror(@PathVariable(value = "id")long id){
         return mirrorService.deleteMirror(id);
     }
 
-    @RequestMapping(value = "/resource",method = RequestMethod.POST)
+    @PostMapping(value = "/resource")
     public ResponseResult addMirror(@RequestBody MirrorVo mirrorVo){
         return mirrorService.addMirror(mirrorVo);
     }
