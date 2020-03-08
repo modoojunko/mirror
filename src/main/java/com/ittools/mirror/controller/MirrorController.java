@@ -4,6 +4,7 @@ import com.ittools.mirror.common.ResponseResult;
 import com.ittools.mirror.service.MirrorService;
 import com.ittools.mirror.vo.MirrorVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
@@ -13,6 +14,7 @@ public class MirrorController {
 
     @Autowired
     MirrorService mirrorService;
+
 
 
     @GetMapping(value = "/resource")

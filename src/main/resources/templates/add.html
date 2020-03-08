@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index page</title>
+</head>
+<body>
+
+<form action="" th:action="@{/save}" method="post">
+    源名字<input type="text" name="name">
+    源内容<input type="text" name="content">
+    维护人<input type="text" name="maintainer">
+    <input type="submit" value="确定">
+</form>
+</body>
+</html>
