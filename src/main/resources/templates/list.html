@@ -12,6 +12,7 @@
     <td th:text="${mirror.content}"></td>
     <td th:text="${mirror.maintainer}"></td>
     <td th:text="${#dates.format(mirror.updatedAt,'yyyy-MM-dd HH:mm:ss')}"></td>
+    <td><a th:href="@{/delete(id=${mirror.id})}">删除</a></td>
 </tr>
 </table>
 <form class="form-group">

@@ -34,4 +34,11 @@ public class MirrorWebController {
         model.addAttribute("mirrors",mirrorService.getMirror());
         return "list";
     }
+
+    @RequestMapping("/delete")
+    public String delete(Long id, Model model){
+        mirrorService.deleteMirror(id);
+        model.addAttribute("mirrors",mirrorService.getMirror());
+        return "list";
+    }
 }
