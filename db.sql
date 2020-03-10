@@ -1,0 +1,21 @@
+CREATE TABLE `mirror` (
+    `id` INT NOT NULL AUTO_INCREMENT, 
+	`name` VARCHAR(50) NOT NULL, 
+	`content` TEXT NOT NULL, 
+	`maintainer` VARCHAR(50) NOT NULL, 
+	`updated_at` DATETIME NOT NULL, 
+	`created_at` DATETIME NOT NULL, 
+	PRIMARY KEY (`id`)
+) ENGINE = INNODB AUTO_INCREMENT = 17 DEFAULT CHARSET = utf8;
+
+
+CREATE TABLE `count` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT, 
+	`total_visit_time` BIGINT NOT NULL DEFAULT '0', 
+	`total_size` FLOAT NOT NULL DEFAULT '0', 
+	`total_user_num` BIGINT NOT NULL DEFAULT '0', 
+	`avg_speed` FLOAT NOT NULL DEFAULT '0', 
+	`updated_at` DATETIME NOT NULL, 
+	`created_at` DATETIME NOT NULL, 
+	PRIMARY KEY (`id`)
+) ENGINE = INNODB AUTO_INCREMENT = 4 DEFAULT CHARSET = utf8;
